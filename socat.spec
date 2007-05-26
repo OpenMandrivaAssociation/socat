@@ -1,5 +1,5 @@
 %define	name	socat
-%define version 1.5.0.0
+%define version 1.6.0.0
 %define release %mkrel 1
 
 Name:		%{name}
