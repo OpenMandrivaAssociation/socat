@@ -1,6 +1,6 @@
 %define	name	socat
 %define version 1.6.0.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:		%{name}
 Summary:	Multipurpose relay
@@ -11,7 +11,7 @@ Url:		http://www.dest-unreach.org/%{name}/
 Group:		Networking/Remote access
 Source0:	http://www.dest-unreach.org/%{name}/download/%{name}-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	openssl
+BuildRequires:	openssl-devel ncurses-devel readline-devel tcp_wrappers-devel
 
 %description
 socat is a relay for bidirectional data transfer between two independent data
@@ -21,7 +21,6 @@ SSL socket, proxy CONNECT connection, a file descriptor (stdin etc.), the GNU
 line editor (readline), a program, or a combination of two of these.
 
 %prep
-#%setup -q -n %{name}-1.4
 %setup -q 
 
 %build
