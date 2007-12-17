@@ -10,7 +10,6 @@ License:	GPL
 Url:		http://www.dest-unreach.org/%{name}/
 Group:		Networking/Remote access
 Source0:	http://www.dest-unreach.org/%{name}/download/%{name}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	openssl-devel ncurses-devel readline-devel tcp_wrappers-devel
 
 %description
