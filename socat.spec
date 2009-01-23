@@ -1,6 +1,6 @@
 %define	name	socat
-%define version 1.6.0.0
-%define release %mkrel 4
+%define version 1.7.0.0
+%define release %mkrel 1
 
 Name:		%{name}
 Summary:	Multipurpose relay
@@ -21,7 +21,7 @@ SSL socket, proxy CONNECT connection, a file descriptor (stdin etc.), the GNU
 line editor (readline), a program, or a combination of two of these.
 
 %prep
-%setup -q 
+%setup -q
 
 %build
 %configure2_5x
