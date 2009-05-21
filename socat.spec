@@ -1,6 +1,6 @@
 %define	name	socat
-%define version 1.7.0.0
-%define release %mkrel 2
+%define version 1.7.1.1
+%define release %mkrel 1
 
 Name:		%{name}
 Summary:	Multipurpose relay
