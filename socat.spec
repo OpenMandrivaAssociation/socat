@@ -1,6 +1,6 @@
 %define	name	socat
-%define version 1.7.1.2
-%define release %mkrel 2
+%define version 1.7.1.3
+%define release %mkrel 1
 
 Name:		%{name}
 Summary:	Multipurpose relay
@@ -9,7 +9,7 @@ Release:	%{release}
 License:	GPL
 Url:		http://www.dest-unreach.org/%{name}/
 Group:		Networking/Remote access
-Source0:	http://www.dest-unreach.org/%{name}/download/%{name}-%{version}.tar.bz2
+Source0:	http://www.dest-unreach.org/%{name}/download/%{name}-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	openssl-devel ncurses-devel readline-devel tcp_wrappers-devel
 
