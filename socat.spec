@@ -1,6 +1,6 @@
 %define	name	socat
-%define version 1.7.1.3
-%define release %mkrel 1
+%define version 1.7.2.0
+%define release 1
 
 Name:		%{name}
 Summary:	Multipurpose relay
@@ -12,6 +12,7 @@ Group:		Networking/Remote access
 Source0:	http://www.dest-unreach.org/%{name}/download/%{name}-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	openssl-devel ncurses-devel readline-devel tcp_wrappers-devel
+Patch0:		unused_libs.patch
 
 %description
 socat is a relay for bidirectional data transfer between two independent data
@@ -28,12 +29,7 @@ line editor (readline), a program, or a combination of two of these.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 %makeinstall_std
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
