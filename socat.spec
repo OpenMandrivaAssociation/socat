@@ -1,16 +1,11 @@
-%define	name	socat
-%define version 1.7.2.0
-%define release 1
-
-Name:		%{name}
+Name:		socat
 Summary:	Multipurpose relay
-Version:	%{version}
-Release:	%{release}
+Version:	1.7.2.2
+Release:	1
 License:	GPL
 Url:		http://www.dest-unreach.org/%{name}/
 Group:		Networking/Remote access
 Source0:	http://www.dest-unreach.org/%{name}/download/%{name}-%{version}.tar.gz
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	openssl-devel ncurses-devel readline-devel tcp_wrappers-devel
 Patch0:		unused_libs.patch
 
@@ -32,7 +27,6 @@ line editor (readline), a program, or a combination of two of these.
 %makeinstall_std
 
 %files
-%defattr(-,root,root)
 %doc README
 %{_bindir}/%{name}
 %{_bindir}/filan
