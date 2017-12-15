@@ -6,7 +6,7 @@ License:	GPL
 Url:		http://www.dest-unreach.org/%{name}/
 Group:		Networking/Remote access
 Source0:	http://www.dest-unreach.org/%{name}/download/%{name}-%{version}.tar.gz
-%if %{mdvver} >= 3000000
+%if %{mdvver} > 3000000
 Patch0:		socat-1.7.3.1-openssl-1.1.patch
 %endif
 BuildRequires:	openssl-devel
