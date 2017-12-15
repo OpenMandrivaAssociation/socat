@@ -1,12 +1,14 @@
 Name:		socat
 Summary:	Multipurpose relay
-Version:	1.7.3.1
+Version:	1.7.3.2
 Release:	1
 License:	GPL
 Url:		http://www.dest-unreach.org/%{name}/
 Group:		Networking/Remote access
 Source0:	http://www.dest-unreach.org/%{name}/download/%{name}-%{version}.tar.gz
-Patch0:		unused_libs.patch
+%if %{mdvver} >= 3000000
+Patch0:		socat-1.7.3.1-openssl-1.1.patch
+%endif
 BuildRequires:	openssl-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	readline-devel
@@ -21,6 +23,7 @@ line editor (readline), a program, or a combination of two of these.
 
 %prep
 %setup -q
+%apply_patches
 
 %build
 %configure
