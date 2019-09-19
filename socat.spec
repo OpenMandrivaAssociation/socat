@@ -1,7 +1,7 @@
 Name:		socat
 Summary:	Multipurpose relay
-Version:	1.7.3.2
-Release:	3
+Version:	1.7.3.3
+Release:	1
 License:	GPL
 Url:		http://www.dest-unreach.org/%{name}/
 Group:		Networking/Remote access
