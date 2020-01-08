@@ -1,14 +1,14 @@
 Name:		socat
 Summary:	Multipurpose relay
-Version:	1.7.3.3
+Version:	1.7.3.4
 Release:	1
 License:	GPL
 Url:		http://www.dest-unreach.org/%{name}/
 Group:		Networking/Remote access
 Source0:	http://www.dest-unreach.org/%{name}/download/%{name}-%{version}.tar.gz
-BuildRequires:	openssl-devel
-BuildRequires:	ncurses-devel
-BuildRequires:	readline-devel
+BuildRequires:	pkgconfig(openssl)
+BuildRequires:	pkgconfig(ncurses)
+BuildRequires:	pkgconfig(readline)
 BuildRequires:	tcp_wrappers-devel
 
 %description
@@ -19,15 +19,14 @@ SSL socket, proxy CONNECT connection, a file descriptor (stdin etc.), the GNU
 line editor (readline), a program, or a combination of two of these.
 
 %prep
-%setup -q
-%apply_patches
+%autosetup -p1
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README
