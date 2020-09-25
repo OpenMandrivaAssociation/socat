@@ -6,6 +6,7 @@ License:	GPL
 Url:		http://www.dest-unreach.org/%{name}/
 Group:		Networking/Remote access
 Source0:	http://www.dest-unreach.org/%{name}/download/%{name}-%{version}.tar.gz
+Patch0:	09-fix_GCC10_FTBFS.patch
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(readline)
