@@ -1,0 +1,41 @@
+Description: no local definition of libwrap extern variables needed
+ Simply comment out those variables.
+Author: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Bug-Debian: https://bugs.debian.org/957823
+Last-Update: 2020-04-19
+
+---
+
+--- socat-1.7.3.4.orig/filan.c
++++ socat-1.7.3.4/filan.c
+@@ -30,7 +30,7 @@ static int filan_streams_analyze(int fd,
+ 
+ /* dirty workaround so we dont get an error on AIX when being linked with
+    libwrap */
+-int allow_severity, deny_severity;
++//int allow_severity, deny_severity;
+ 
+ /* global variables for configuring filan */
+ bool filan_followsymlinks;
+--- socat-1.7.3.4.orig/procan.c
++++ socat-1.7.3.4/procan.c
+@@ -21,7 +21,7 @@
+ 
+ /* dirty workaround so we dont get an error on AIX when getting linked with
+    libwrap */
+-int allow_severity, deny_severity;
++//int allow_severity, deny_severity;
+ 
+ 
+ int procan(FILE *outfile) {
+--- socat-1.7.3.4.orig/xio-tcpwrap.c
++++ socat-1.7.3.4/xio-tcpwrap.c
+@@ -27,7 +27,7 @@ const struct optdesc opt_tcpwrap_hosts_d
+ 
+ /* they are declared only externally with libwrap and would be unresolved
+    without these definitions */
+-int allow_severity=10, deny_severity=10;
++//int allow_severity=10, deny_severity=10;
+ 
+ /* returns 0 if option was found and could be applied
+    returns 1 if option was not found
