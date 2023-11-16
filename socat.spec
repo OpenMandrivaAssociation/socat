@@ -1,7 +1,7 @@
 Name:		socat
 Summary:	Multipurpose relay
-Version:	1.7.4.4
-Release:	2
+Version:	1.8.0.0
+Release:	1
 License:	GPL
 Url:		http://www.dest-unreach.org/%{name}/
 Group:		Networking/Remote access
@@ -32,6 +32,8 @@ line editor (readline), a program, or a combination of two of these.
 %files
 %doc README
 %{_bindir}/%{name}
+%{_bindir}/socat-*.sh
+%{_bindir}/socat1
 %{_bindir}/filan
 %{_bindir}/procan
 %{_mandir}/man1/*
