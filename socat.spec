@@ -1,6 +1,6 @@
 Name:		socat
 Summary:	Multipurpose relay
-Version:	1.8.0.1
+Version:	1.8.0.2
 Release:	1
 License:	GPL
 Url:		https://www.dest-unreach.org/%{name}/
