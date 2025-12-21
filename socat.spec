@@ -7,6 +7,11 @@ Url:		https://www.dest-unreach.org/%{name}/
 Group:		Networking/Remote access
 Source0:	http://www.dest-unreach.org/%{name}/download/%{name}-%{version}.tar.gz
 #Patch0:	09-fix_GCC10_FTBFS.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(readline)
