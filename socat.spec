@@ -1,6 +1,6 @@
 Name:		socat
 Summary:	Multipurpose relay
-Version:	1.8.1.0
+Version:	1.8.1.1
 Release:	1
 License:	GPL
 Url:		https://www.dest-unreach.org/%{name}/
@@ -9,7 +9,6 @@ Source0:	http://www.dest-unreach.org/%{name}/download/%{name}-%{version}.tar.gz
 #Patch0:	09-fix_GCC10_FTBFS.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool-base
 BuildRequires:	slibtool
 BuildRequires:	make
 BuildRequires:	pkgconfig(openssl)
@@ -27,8 +26,10 @@ line editor (readline), a program, or a combination of two of these.
 %prep
 %autosetup -p1
 
-%build
+%conf
 %configure
+
+%build
 %make_build
 
 %install
